@@ -11,23 +11,30 @@
             box-sizing: border-box;
             font-family: "Microsoft YaHei", sans-serif;
         }
+        /* 全屏固定二次元壁纸 */
         body {
-            background: #f0f4ff;
+            background: url("https://pub-0d568f6b7e24419e959f1164a212a473.r2.dev/%E7%89%B9%E5%B7%A517%E5%AF%BC%E8%88%AA%E9%A1%B5%E5%A3%81%E7%BA%B8.jpg") no-repeat center center fixed;
+            background-size: cover;
             padding: 20px;
+            min-height: 100vh;
         }
+        /* 毛玻璃核心效果 */
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: #ffffff;
-            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 16px;
             padding: 24px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
         }
         h1 {
             color: #4285F4;
             text-align: center;
             margin-bottom: 20px;
-            font-size: 24px;
+            font-size: 26px;
         }
         .btn-primary {
             display: block;
@@ -39,16 +46,20 @@
             text-decoration: none;
             font-weight: bold;
             margin-bottom: 16px;
+            transition: 0.3s;
+        }
+        .btn-primary:hover {
+            background: #3367D6;
         }
         .domain-tip {
-            background: #e8f0fe;
+            background: rgba(232, 240, 254, 0.8);
             border-left: 4px solid #4285F4;
             padding: 12px;
             border-radius: 8px;
             margin-bottom: 16px;
         }
         .warning-tip {
-            background: #fff9e6;
+            background: rgba(255, 249, 230, 0.85);
             border-left: 4px solid #ffb800;
             padding: 16px;
             border-radius: 8px;
@@ -62,15 +73,21 @@
             color: #4285F4;
             text-decoration: none;
             margin-right: 8px;
+            line-height: 1.8;
         }
         .browser-links a:hover {
             text-decoration: underline;
         }
         .link-card {
-            background: #f8fafc;
+            background: rgba(248, 250, 252, 0.85);
             border-radius: 8px;
             padding: 16px;
             margin-bottom: 12px;
+            transition: 0.2s;
+        }
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
         .link-card small {
             color: #64748b;
@@ -80,6 +97,14 @@
             text-decoration: none;
             display: inline-block;
             margin-top: 8px;
+            font-weight: 500;
+        }
+        .link-card a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .container { padding: 16px; }
         }
     </style>
 </head>
@@ -87,7 +112,7 @@
     <div class="container">
         <h1>星萌社——导航页</h1>
 
-        <a href="#" class="btn-primary">Ctrl+D 收藏本页到浏览器收藏夹</a>
+        <a href="#" class="btn-primary" onclick="alert('请按 Ctrl+D 收藏本页')">Ctrl+D 收藏本页到浏览器收藏夹</a>
 
         <div class="domain-tip">
             最新域名：slgbox.top【如打不开建议使用数据链接或者谷歌浏览器】
@@ -96,31 +121,31 @@
         <div class="warning-tip">
             <h3>⚠️【重要】勿使用360这种浏览器访问</h3>
             <p>可能会出现误报和拦截等非法网页奇怪操作</p>
-            <p>还有部分家庭WIFI可能被DNS劫持直接跳转非法网页<p>
-            <p>这种情况可以联系我帮解决或者直接开数据链接访问<p>
+            <p>还有部分家庭WIFI可能被DNS劫持直接跳转非法网页</p>
+            <p>这种情况可以联系我帮解决或者直接开数据链接访问</p>
             <p style="margin: 8px 0;">✅ 下面介绍一些常用浏览器：</p>
             <div class="browser-links">
-                <a href="#">Chrome官网</a> |
-                <a href="#">Edge官网</a> |
-                <a href="#">Firefox官网</a> |
-                <a href="#">X浏览器官网</a> |
-                <a href="#">QQ浏览器官网</a> |
-                <a href="#">UC浏览器官网</a>
+                <a href="https://www.google.com/chrome/" target="_blank">Chrome官网</a> |
+                <a href="https://www.microsoft.com/edge" target="_blank">Edge官网</a> |
+                <a href="https://www.mozilla.org/firefox/" target="_blank">Firefox官网</a> |
+                <a href="https://www.xbext.com/" target="_blank">X浏览器官网</a> |
+                <a href="https://browser.qq.com/" target="_blank">QQ浏览器官网</a> |
+                <a href="https://www.uc.cn/" target="_blank">UC浏览器官网</a>
             </div>
         </div>
 
         <div class="link-card">
             <small>492ms</small>
             <h3>主站地址</h3>
-            <a href="https://www.slgbox.top">访问主站</a>
-            <p style="color: #64748b; margin-top: 4px;">无法访问</p>
+            <a href="shturl.cc/j5PysCBteJUo" target="_blank">访问主站</a>
+            <p style="color: #64748b; margin-top: 4px;">正常访问</p>
         </div>
 
         <div class="link-card">
             <small>493ms</small>
             <h3>下载列表</h3>
-            <a href="#">点击前往</a>
-            <p style="color: #64748b; margin-top: 4px;">无法访问</p>
+            <a href="shturl.cc/j5PysCBteJUo" target="_blank">点击前往</a>
+            <p style="color: #64748b; margin-top: 4px;">正常访问</p>
         </div>
 
         <p style="margin-top: 16px; color: #64748b; font-size: 14px;">ℹ️ 星萌资源库(部分地区需要挂梯子)</p>
